@@ -22,7 +22,7 @@ jobs:
       - name: 生成 XAML
         run: |
           cd pcl-home
-          python generate.py --output ../Custom.xaml
+          python generate.py
 
       - name: 提交并推送
         run: |
