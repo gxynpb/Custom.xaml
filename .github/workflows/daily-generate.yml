@@ -2,8 +2,9 @@ name: 每日生成 PCL 主页
 
 on:
   schedule:
-    # 每天北京时间 00:05 运行（UTC 16:05）
-    - cron: '5 16 * * *'
+    # 北京时间 8/10/12/14/16/18/20/22 点各运行一次（UTC 0/2/4/6/8/10/12/14）
+    # 凌晨 23:00-8:00 不运行
+    - cron: '0 0,2,4,6,8,10,12,14 * * *'
   workflow_dispatch:
 
 jobs:
@@ -28,4 +29,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Custom.xaml
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 每日更新主页内容 [自动]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 更新主页内容 [自动]" && git push)
