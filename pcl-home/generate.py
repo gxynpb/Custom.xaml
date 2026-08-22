@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-PCL2 自定义主页生成器
+PCL2 自定义主页生成器 - YARN 粉色系主题
 从题库中随机抽取内容，生成 Custom.xaml 文件
 
 用法:
-    python generate.py                 # 随机抽取（每次不一样）
-    python generate.py --seed 20240822 # 按日期种子（同一天一样）
-    python generate.py --output Custom.xaml
+    python generate.py                 # 按当天日期生成（同一天内容一样）
+    python generate.py --seed hello    # 指定种子
+    python generate.py --repo gxynpb/Custom.xaml  # 指定 GitHub 仓库（用于图片路径）
 """
 
 import json
@@ -15,10 +15,13 @@ import argparse
 import os
 from datetime import datetime
 
-# XAML 模板
+# ⚙️ 配置：改成你的 GitHub 用户名/仓库名，图片会自动用 Pages 地址
+DEFAULT_REPO = "gxynpb/Custom.xaml"  # 格式：用户名/仓库名
+
 XAML_TEMPLATE = '''<!-- PCL2 自定义主页 - YARN 粉色系主题
      由 generate.py 自动生成，每天内容不一样
      生成时间: {gen_time}
+     种子: {seed}
      如果玩炸了，把这个文件直接删除即可恢复默认。 -->
 
 <!-- ============================================ -->
@@ -33,9 +36,9 @@ XAML_TEMPLATE = '''<!-- PCL2 自定义主页 - YARN 粉色系主题
     <!-- 左侧：猫咪插画横幅 -->
     <local:MyCard Grid.Column="0" CanSwap="False" HasMouseAnimation="False" Margin="0,0,8,0">
         <StackPanel Margin="0,0,0,0">
-            <local:MyImage Height="180" HorizontalAlignment="Center"
-                           Source="pack://application:,,,/images/Blocks/GrassPath.png"
-                           FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
+            <local:MyImage Height="180" HorizontalAlignment="Stretch"
+                           Source="{banner_url}"
+                           FallbackSource="pack://application:,,,/images/Blocks/GrassPath.png" />
         </StackPanel>
     </local:MyCard>
 
@@ -153,18 +156,19 @@ XAML_TEMPLATE = '''<!-- PCL2 自定义主页 - YARN 粉色系主题
 def main():
     parser = argparse.ArgumentParser(description='PCL2 自定义主页生成器')
     parser.add_argument('--seed', type=str, default=None,
-                        help='随机种子（用日期则每天内容一样，如 20240822）')
+                        help='随机种子（默认用当天日期，保证同一天内容一致）')
     parser.add_argument('--data', type=str, default='data/quotes.json',
                         help='题库 JSON 文件路径')
     parser.add_argument('--output', type=str, default='Custom.xaml',
                         help='输出 XAML 文件路径')
+    parser.add_argument('--repo', type=str, default=DEFAULT_REPO,
+                        help='GitHub 仓库 用户名/仓库名，用于生成图片地址')
     args = parser.parse_args()
 
     # 确定种子
     if args.seed:
         seed = args.seed
     else:
-        # 默认用当天日期作为种子，保证同一天内容一致
         seed = datetime.now().strftime('%Y%m%d')
 
     random.seed(seed)
@@ -176,13 +180,24 @@ def main():
         data = json.load(f)
 
     # 随机抽取
+    banner_file = random.choice(data['banners'])
     yiji = random.choice(data['yiji'])
     tip = random.choice(data['tips'])
     greeting = random.choice(data['greetings'])
 
+    # 构建横幅图片地址（GitHub Pages）
+    repo_parts = args.repo.split('/')
+    if len(repo_parts) == 2:
+        user, repo_name = repo_parts
+        banner_url = f"https://{user}.github.io/{repo_name}/pcl-home/assets/{banner_file}"
+    else:
+        banner_url = f"pcl-home/assets/{banner_file}"
+
     # 生成 XAML
     xaml = XAML_TEMPLATE.format(
         gen_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        seed=seed,
+        banner_url=banner_url,
         yi=yiji['yi'],
         ji=yiji['ji'],
         tip_theme=tip['theme'],
@@ -200,9 +215,11 @@ def main():
 
     print(f'✅ 生成成功！')
     print(f'   种子: {seed}')
+    print(f'   横幅图: {banner_file}')
     print(f'   今日宜忌: {yiji["yi"][:15]}...')
     print(f'   小贴士: {tip["title"]}')
     print(f'   问候语: {greeting["text"][:20]}...')
+    print(f'   小图标: {greeting["icon"]}')
     print(f'   输出: {output_path}')
 
 

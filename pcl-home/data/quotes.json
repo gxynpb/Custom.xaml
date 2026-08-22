@@ -1,4 +1,9 @@
 {
+  "banners": [
+    "banner-cat.jpg",
+    "banner-cat2.jpg",
+    "banner-cat3.jpg"
+  ],
   "yiji": [
     {
       "yi": "采集附魔金苹果、用不死图腾兜底、打造下界合金套",
