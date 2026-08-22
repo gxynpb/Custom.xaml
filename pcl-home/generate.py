@@ -180,8 +180,17 @@ def main():
     with open(data_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # 随机抽取
+    # 随机抽取横幅
     banner_file = random.choice(data['banners'])
+
+    # 随机抽取3个不重复的图标（MCMOD / LittleSkin / 每日问候）
+    icon_pool = data['icons'].copy()
+    random.shuffle(icon_pool)
+    mcmod_icon_file = icon_pool[0]
+    littleskin_icon_file = icon_pool[1]
+    greeting_icon_file = icon_pool[2]
+
+    # 随机抽取文字内容
     yiji = random.choice(data['yiji'])
     tip = random.choice(data['tips'])
     greeting = random.choice(data['greetings'])
@@ -192,15 +201,15 @@ def main():
         user, repo_name = repo_parts
         base_url = f"https://{user}.github.io/{repo_name}/pcl-home/assets"
         banner_url = f"{base_url}/{banner_file}"
-        greeting_icon_url = f"{base_url}/{greeting['icon']}"
-        mcmod_icon_url = f"{base_url}/icon-cat-black.jpg"
-        littleskin_icon_url = f"{base_url}/icon-cat-white.jpg"
+        greeting_icon_url = f"{base_url}/{greeting_icon_file}"
+        mcmod_icon_url = f"{base_url}/{mcmod_icon_file}"
+        littleskin_icon_url = f"{base_url}/{littleskin_icon_file}"
     else:
         base_url = "pcl-home/assets"
         banner_url = f"{base_url}/{banner_file}"
-        greeting_icon_url = f"{base_url}/{greeting['icon']}"
-        mcmod_icon_url = f"{base_url}/icon-cat-black.jpg"
-        littleskin_icon_url = f"{base_url}/icon-cat-white.jpg"
+        greeting_icon_url = f"{base_url}/{greeting_icon_file}"
+        mcmod_icon_url = f"{base_url}/{mcmod_icon_file}"
+        littleskin_icon_url = f"{base_url}/{littleskin_icon_file}"
 
     # 生成 XAML
     xaml = XAML_TEMPLATE.format(
@@ -227,10 +236,12 @@ def main():
     print(f'✅ 生成成功！')
     print(f'   种子: {seed}')
     print(f'   横幅图: {banner_file}')
+    print(f'   MCMOD图标: {mcmod_icon_file}')
+    print(f'   LittleSkin图标: {littleskin_icon_file}')
+    print(f'   问候图标: {greeting_icon_file}')
     print(f'   今日宜忌: {yiji["yi"][:15]}...')
     print(f'   小贴士: {tip["title"]}')
     print(f'   问候语: {greeting["text"][:20]}...')
-    print(f'   小图标: {greeting["icon"]}')
     print(f'   输出: {output_path}')
 
 

@@ -2,7 +2,36 @@
   "banners": [
     "banner-cat.jpg",
     "banner-cat2.jpg",
-    "banner-cat3.jpg"
+    "banner-cat3.jpg",
+    "banner-cat4.jpg",
+    "banner-cat5.jpg",
+    "banner-cat6.jpg",
+    "banner-cat7.jpg",
+    "banner-cat8.jpg",
+    "banner-cat9.jpg",
+    "banner-cat10.jpg",
+    "banner-cat11.jpg",
+    "banner-cat12.jpg",
+    "banner-cat13.jpg",
+    "banner-cat14.jpg",
+    "banner-cat15.jpg"
+  ],
+  "icons": [
+    "icon-cat-black.jpg",
+    "icon-cat-white.jpg",
+    "icon-cat-orange.jpg",
+    "icon-bunny.jpg",
+    "icon-rabbit-gray.jpg",
+    "icon-bear.jpg",
+    "icon-shiba.jpg",
+    "icon-fox.jpg",
+    "icon-panda.jpg",
+    "icon-penguin.jpg",
+    "icon-hamster.jpg",
+    "icon-duck.jpg",
+    "icon-frog.jpg",
+    "icon-owl.jpg",
+    "icon-unicorn.jpg"
   ],
   "yiji": [
     {
@@ -78,36 +107,28 @@
   ],
   "greetings": [
     {
-      "text": "( ´ ▽ ` )ﾉ 乘着小船在浩瀚的大海上漂流，吹着海风看看跳出水面的小海豚~",
-      "icon": "icon-bunny.jpg"
+      "text": "( ´ ▽ ` )ﾉ 乘着小船在浩瀚的大海上漂流，吹着海风看看跳出水面的小海豚~"
     },
     {
-      "text": "(๑•̀ㅂ•́)و✧ 今天也要加油挖钻石鸭！累了就歇会儿，别太肝啦~",
-      "icon": "icon-cat-black.jpg"
+      "text": "(๑•̀ㅂ•́)و✧ 今天也要加油挖钻石鸭！累了就歇会儿，别太肝啦~"
     },
     {
-      "text": "(｡･ω･｡)ﾉ♡ 下雨啦，记得带伞哦~ MC 里下雨也别忘了躲雨呀！",
-      "icon": "icon-cat-white.jpg"
+      "text": "(｡･ω･｡)ﾉ♡ 下雨啦，记得带伞哦~ MC 里下雨也别忘了躲雨呀！"
     },
     {
-      "text": "(≧▽≦) 今天想吃点什么好吃的？MC 里的牛排和蛋糕都不错哦~",
-      "icon": "icon-bear.jpg"
+      "text": "(≧▽≦) 今天想吃点什么好吃的？MC 里的牛排和蛋糕都不错哦~"
     },
     {
-      "text": "ヾ(≧▽≦*)o 又是元气满满的一天！今天准备去探险还是建房子呀？",
-      "icon": "icon-bunny.jpg"
+      "text": "ヾ(≧▽≦*)o 又是元气满满的一天！今天准备去探险还是建房子呀？"
     },
     {
-      "text": "(◍•ᴗ•◍)❤ 记得按时吃饭睡觉哦~ 别光顾着玩 MC 把身体忘了！",
-      "icon": "icon-cat-white.jpg"
+      "text": "(◍•ᴗ•◍)❤ 记得按时吃饭睡觉哦~ 别光顾着玩 MC 把身体忘了！"
     },
     {
-      "text": "ψ(｀∇´)ψ 冲鸭！今天的目标是挖到一组钻石！",
-      "icon": "icon-cat-black.jpg"
+      "text": "ψ(｀∇´)ψ 冲鸭！今天的目标是挖到一组钻石！"
     },
     {
-      "text": "(´-ω-`) 困了就早点睡~ 梦里也能玩 Minecraft 哦！",
-      "icon": "icon-bear.jpg"
+      "text": "(´-ω-`) 困了就早点睡~ 梦里也能玩 Minecraft 哦！"
     }
   ]
 }
