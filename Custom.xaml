@@ -1,6 +1,7 @@
 <!-- PCL2 自定义主页 - YARN 粉色系主题
      由 generate.py 自动生成，每天内容不一样
-     生成时间: 2026-08-23 00:02:11
+     生成时间: 2026-08-23 00:32:13
+     种子: 20260823
      如果玩炸了，把这个文件直接删除即可恢复默认。 -->
 
 <!-- ============================================ -->
@@ -15,9 +16,9 @@
     <!-- 左侧：猫咪插画横幅 -->
     <local:MyCard Grid.Column="0" CanSwap="False" HasMouseAnimation="False" Margin="0,0,8,0">
         <StackPanel Margin="0,0,0,0">
-            <local:MyImage Height="180" HorizontalAlignment="Center"
-                           Source="pack://application:,,,/images/Blocks/GrassPath.png"
-                           FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
+            <local:MyImage Height="180" HorizontalAlignment="Stretch"
+                           Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/banner-cat.jpg"
+                           FallbackSource="pack://application:,,,/images/Blocks/GrassPath.png" />
         </StackPanel>
     </local:MyCard>
 
@@ -25,9 +26,9 @@
     <local:MyCard Grid.Column="1" Title="今日宜忌" CanSwap="True" IsSwapped="False" Margin="8,0,0,0">
         <StackPanel Margin="20,40,18,15">
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,6" Foreground="#2E7D32" FontWeight="Bold" FontSize="12"
-                       Text="【宜】探索废弃矿井、收集钻石、驯服狼狗" />
+                       Text="【宜】整理背包、探索地牢、酿造药水" />
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,0" Foreground="#C62828" FontWeight="Bold" FontSize="12"
-                       Text="【忌】挖直井、调戏苦力怕、裸装闯下界" />
+                       Text="【忌】在岩浆边挂机、用手挖沙子、追小鸡跳悬崖" />
         </StackPanel>
     </local:MyCard>
 </Grid>
