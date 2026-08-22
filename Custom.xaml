@@ -1,6 +1,6 @@
 <!-- PCL2 自定义主页 - YARN 粉色系主题
      由 generate.py 自动生成，每天内容不一样
-     生成时间: 2026-08-23 00:32:13
+     生成时间: 2026-08-23 00:49:07
      种子: 20260823
      如果玩炸了，把这个文件直接删除即可恢复默认。 -->
 
@@ -63,7 +63,8 @@
                 <TextBlock Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12"
                            Text="(≧▽≦) 今天想吃点什么好吃的？MC 里的牛排和蛋糕都不错哦~" />
                 <local:MyImage Grid.Column="1" Width="35" Height="35"
-                               Source="pack://application:,,,/images/Blocks/CommandBlock.png" />
+                               Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-bear.jpg"
+                               FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
             </Grid>
         </StackPanel>
     </local:MyCard>
@@ -80,14 +81,14 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <local:MyListItem Grid.Column="0" Margin="-5,2,5,8"
-                              Logo="pack://application:,,,/images/Blocks/CommandBlock.png"
+                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-cat-black.jpg"
                               Title="MCMOD 百科"
                               Info="最大的 Minecraft 中文 MOD 百科"
                               EventType="打开网页"
                               EventData="https://www.mcmod.cn/"
                               Type="Clickable" />
             <local:MyListItem Grid.Column="1" Margin="5,2,-5,8"
-                              Logo="pack://application:,,,/images/Blocks/GoldBlock.png"
+                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-cat-white.jpg"
                               Title="LittleSkin 皮肤站"
                               Info="快速、可靠的 Minecraft 皮肤站"
                               EventType="打开网页"
