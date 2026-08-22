@@ -1,0 +1,31 @@
+name: 每日生成 PCL 主页
+
+on:
+  schedule:
+    # 每天北京时间 00:05 运行（UTC 16:05）
+    - cron: '5 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 生成 XAML
+        run: |
+          cd pcl-home
+          python generate.py --output ../Custom.xaml
+
+      - name: 提交并推送
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Custom.xaml
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 每日更新主页内容 [自动]" && git push)
