@@ -83,7 +83,8 @@ XAML_TEMPLATE = '''<!-- PCL2 自定义主页 - YARN 粉色系主题
                 <TextBlock Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12"
                            Text="{greeting_text}" />
                 <local:MyImage Grid.Column="1" Width="35" Height="35"
-                               Source="pack://application:,,,/images/Blocks/{greeting_icon}" />
+                               Source="{greeting_icon_url}"
+                               FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
             </Grid>
         </StackPanel>
     </local:MyCard>
@@ -100,14 +101,14 @@ XAML_TEMPLATE = '''<!-- PCL2 自定义主页 - YARN 粉色系主题
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <local:MyListItem Grid.Column="0" Margin="-5,2,5,8"
-                              Logo="pack://application:,,,/images/Blocks/CommandBlock.png"
+                              Logo="{mcmod_icon_url}"
                               Title="MCMOD 百科"
                               Info="最大的 Minecraft 中文 MOD 百科"
                               EventType="打开网页"
                               EventData="https://www.mcmod.cn/"
                               Type="Clickable" />
             <local:MyListItem Grid.Column="1" Margin="5,2,-5,8"
-                              Logo="pack://application:,,,/images/Blocks/GoldBlock.png"
+                              Logo="{littleskin_icon_url}"
                               Title="LittleSkin 皮肤站"
                               Info="快速、可靠的 Minecraft 皮肤站"
                               EventType="打开网页"
@@ -185,13 +186,21 @@ def main():
     tip = random.choice(data['tips'])
     greeting = random.choice(data['greetings'])
 
-    # 构建横幅图片地址（GitHub Pages）
+    # 构建图片地址（GitHub Pages）
     repo_parts = args.repo.split('/')
     if len(repo_parts) == 2:
         user, repo_name = repo_parts
-        banner_url = f"https://{user}.github.io/{repo_name}/pcl-home/assets/{banner_file}"
+        base_url = f"https://{user}.github.io/{repo_name}/pcl-home/assets"
+        banner_url = f"{base_url}/{banner_file}"
+        greeting_icon_url = f"{base_url}/{greeting['icon']}"
+        mcmod_icon_url = f"{base_url}/icon-cat-black.jpg"
+        littleskin_icon_url = f"{base_url}/icon-cat-white.jpg"
     else:
-        banner_url = f"pcl-home/assets/{banner_file}"
+        base_url = "pcl-home/assets"
+        banner_url = f"{base_url}/{banner_file}"
+        greeting_icon_url = f"{base_url}/{greeting['icon']}"
+        mcmod_icon_url = f"{base_url}/icon-cat-black.jpg"
+        littleskin_icon_url = f"{base_url}/icon-cat-white.jpg"
 
     # 生成 XAML
     xaml = XAML_TEMPLATE.format(
@@ -204,7 +213,9 @@ def main():
         tip_title=tip['title'],
         tip_content=tip['content'],
         greeting_text=greeting['text'],
-        greeting_icon=greeting['icon'],
+        greeting_icon_url=greeting_icon_url,
+        mcmod_icon_url=mcmod_icon_url,
+        littleskin_icon_url=littleskin_icon_url,
     )
 
     # 写入文件

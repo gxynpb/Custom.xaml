@@ -79,35 +79,35 @@
   "greetings": [
     {
       "text": "( ´ ▽ ` )ﾉ 乘着小船在浩瀚的大海上漂流，吹着海风看看跳出水面的小海豚~",
-      "icon": "Egg.png"
+      "icon": "icon-bunny.jpg"
     },
     {
       "text": "(๑•̀ㅂ•́)و✧ 今天也要加油挖钻石鸭！累了就歇会儿，别太肝啦~",
-      "icon": "GoldBlock.png"
+      "icon": "icon-cat-black.jpg"
     },
     {
       "text": "(｡･ω･｡)ﾉ♡ 下雨啦，记得带伞哦~ MC 里下雨也别忘了躲雨呀！",
-      "icon": "Grass.png"
+      "icon": "icon-cat-white.jpg"
     },
     {
       "text": "(≧▽≦) 今天想吃点什么好吃的？MC 里的牛排和蛋糕都不错哦~",
-      "icon": "CommandBlock.png"
+      "icon": "icon-bear.jpg"
     },
     {
       "text": "ヾ(≧▽≦*)o 又是元气满满的一天！今天准备去探险还是建房子呀？",
-      "icon": "GrassPath.png"
+      "icon": "icon-bunny.jpg"
     },
     {
       "text": "(◍•ᴗ•◍)❤ 记得按时吃饭睡觉哦~ 别光顾着玩 MC 把身体忘了！",
-      "icon": "RedstoneBlock.png"
+      "icon": "icon-cat-white.jpg"
     },
     {
       "text": "ψ(｀∇´)ψ 冲鸭！今天的目标是挖到一组钻石！",
-      "icon": "Anvil.png"
+      "icon": "icon-cat-black.jpg"
     },
     {
       "text": "(´-ω-`) 困了就早点睡~ 梦里也能玩 Minecraft 哦！",
-      "icon": "RedstoneLampOff.png"
+      "icon": "icon-bear.jpg"
     }
   ]
 }
