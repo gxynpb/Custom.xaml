@@ -1,7 +1,7 @@
 <!-- PCL2 自定义主页 - YARN 粉色系主题
      由 generate.py 自动生成，每天内容不一样
-     生成时间: 2026-08-29 17:32:05
-     种子: 20260829
+     生成时间: 2026-08-30 04:08:59
+     种子: 20260830
      如果玩炸了，把这个文件直接删除即可恢复默认。 -->
 
 <!-- ============================================ -->
@@ -17,7 +17,7 @@
     <local:MyCard Grid.Column="0" CanSwap="False" HasMouseAnimation="False" Margin="0,0,8,0">
         <StackPanel Margin="0,0,0,0">
             <local:MyImage Height="180" HorizontalAlignment="Stretch"
-                           Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/banner-cat9.jpg"
+                           Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/banner-cat11.jpg"
                            FallbackSource="pack://application:,,,/images/Blocks/GrassPath.png" />
         </StackPanel>
     </local:MyCard>
@@ -26,9 +26,9 @@
     <local:MyCard Grid.Column="1" Title="今日宜忌" CanSwap="True" IsSwapped="False" Margin="8,0,0,0">
         <StackPanel Margin="20,40,18,15">
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,6" Foreground="#2E7D32" FontWeight="Bold" FontSize="12"
-                       Text="【宜】制作地图、寻找要塞、驯服猫咪" />
+                       Text="【宜】建造自动农场、钓鱼发呆、和村民交易" />
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,0" Foreground="#C62828" FontWeight="Bold" FontSize="12"
-                       Text="【忌】挖钻石不用时运、和猪灵以物易物、在下界睡觉" />
+                       Text="【忌】深夜挖矿、招惹末影人、手撸黑曜石" />
         </StackPanel>
     </local:MyCard>
 </Grid>
@@ -45,10 +45,10 @@
     <!-- 左栏：冒险生存小贴士 -->
     <local:MyCard Grid.Column="0" Title="冒险生存小贴士" CanSwap="True" IsSwapped="False" Margin="0,0,8,0">
         <StackPanel Margin="25,40,23,15">
-            <local:MyHint Theme="Blue"
-                          Text="【末影人怕水】" />
+            <local:MyHint Theme="Yellow"
+                          Text="【钻石在 Y=-58 最多】" />
             <TextBlock TextWrapping="Wrap" Margin="0,8,0,0"
-                       Text="末影人碰到水会受到伤害并瞬移走。下雨时它们会到处乱传送，这时候在头上放个方块或者躲进水里就安全啦！" />
+                       Text="1.18 版本后，钻石矿石最多的层数是 Y=-58。带上水桶和火把，挖到基岩后往上数 5 格开挖最划算！" />
         </StackPanel>
     </local:MyCard>
 
@@ -61,9 +61,9 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12"
-                           Text="( ´ ▽ ` )ﾉ 乘着小船在浩瀚的大海上漂流，吹着海风看看跳出水面的小海豚~" />
+                           Text="ψ(｀∇´)ψ 冲鸭！今天的目标是挖到一组钻石！" />
                 <local:MyImage Grid.Column="1" Width="35" Height="35"
-                               Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-penguin.jpg"
+                               Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-duck.jpg"
                                FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
             </Grid>
         </StackPanel>
@@ -81,14 +81,14 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <local:MyListItem Grid.Column="0" Margin="-5,2,5,8"
-                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-unicorn.jpg"
+                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-panda.jpg"
                               Title="MCMOD 百科"
                               Info="最大的 Minecraft 中文 MOD 百科"
                               EventType="打开网页"
                               EventData="https://www.mcmod.cn/"
                               Type="Clickable" />
             <local:MyListItem Grid.Column="1" Margin="5,2,-5,8"
-                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-rabbit-gray.jpg"
+                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-shiba.jpg"
                               Title="LittleSkin 皮肤站"
                               Info="快速、可靠的 Minecraft 皮肤站"
                               EventType="打开网页"
