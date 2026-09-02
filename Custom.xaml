@@ -1,7 +1,7 @@
 <!-- PCL2 自定义主页 - YARN 粉色系主题
      由 generate.py 自动生成，每天内容不一样
-     生成时间: 2026-09-01 16:12:01
-     种子: 20260901
+     生成时间: 2026-09-02 03:21:39
+     种子: 20260902
      如果玩炸了，把这个文件直接删除即可恢复默认。 -->
 
 <!-- ============================================ -->
@@ -17,7 +17,7 @@
     <local:MyCard Grid.Column="0" CanSwap="False" HasMouseAnimation="False" Margin="0,0,8,0">
         <StackPanel Margin="0,0,0,0">
             <local:MyImage Height="180" HorizontalAlignment="Stretch"
-                           Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/banner-cat4.jpg"
+                           Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/banner-cat15.jpg"
                            FallbackSource="pack://application:,,,/images/Blocks/GrassPath.png" />
         </StackPanel>
     </local:MyCard>
@@ -26,9 +26,9 @@
     <local:MyCard Grid.Column="1" Title="今日宜忌" CanSwap="True" IsSwapped="False" Margin="8,0,0,0">
         <StackPanel Margin="20,40,18,15">
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,6" Foreground="#2E7D32" FontWeight="Bold" FontSize="12"
-                       Text="【宜】采集附魔金苹果、用不死图腾兜底、打造下界合金套" />
+                       Text="【宜】制作地图、寻找要塞、驯服猫咪" />
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,0" Foreground="#C62828" FontWeight="Bold" FontSize="12"
-                       Text="【忌】黑夜不开和平乱晃、不带鞘翅飞虚空、激怒末影龙幼崽" />
+                       Text="【忌】挖钻石不用时运、和猪灵以物易物、在下界睡觉" />
         </StackPanel>
     </local:MyCard>
 </Grid>
@@ -46,9 +46,9 @@
     <local:MyCard Grid.Column="0" Title="冒险生存小贴士" CanSwap="True" IsSwapped="False" Margin="0,0,8,0">
         <StackPanel Margin="25,40,23,15">
             <local:MyHint Theme="Red"
-                          Text="【苦力怕的克星】" />
+                          Text="【音符盒演奏不同乐器】" />
             <TextBlock TextWrapping="Wrap" Margin="0,8,0,0"
-                       Text="苦力怕害怕猫，只要身边有只猫，苦力怕就会躲着你走。在基地周围养几只猫，再也不用担心家被炸了！" />
+                       Text="音符盒下方垫不同的方块可以发出完全不同的乐器声：垫木头是低音吉他、垫沙子是小军鼓、垫玻璃是击弦声、垫金块是铃铛！" />
         </StackPanel>
     </local:MyCard>
 
@@ -61,9 +61,9 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12"
-                           Text="ψ(｀∇´)ψ 冲鸭！今天的目标是挖到一组钻石！" />
+                           Text="( ´ ▽ ` )ﾉ 乘着小船在浩瀚的大海上漂流，吹着海风看看跳出水面的小海豚~" />
                 <local:MyImage Grid.Column="1" Width="35" Height="35"
-                               Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-rabbit-gray.jpg"
+                               Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-duck.jpg"
                                FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
             </Grid>
         </StackPanel>
@@ -88,7 +88,7 @@
                               EventData="https://www.mcmod.cn/"
                               Type="Clickable" />
             <local:MyListItem Grid.Column="1" Margin="5,2,-5,8"
-                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-fox.jpg"
+                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-panda.jpg"
                               Title="LittleSkin 皮肤站"
                               Info="快速、可靠的 Minecraft 皮肤站"
                               EventType="打开网页"
