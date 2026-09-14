@@ -1,7 +1,7 @@
 <!-- PCL2 自定义主页 - YARN 粉色系主题
      由 generate.py 自动生成，每天内容不一样
-     生成时间: 2026-09-13 14:07:54
-     种子: 20260913
+     生成时间: 2026-09-14 03:49:27
+     种子: 20260914
      如果玩炸了，把这个文件直接删除即可恢复默认。 -->
 
 <!-- ============================================ -->
@@ -26,9 +26,9 @@
     <local:MyCard Grid.Column="1" Title="今日宜忌" CanSwap="True" IsSwapped="False" Margin="8,0,0,0">
         <StackPanel Margin="20,40,18,15">
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,6" Foreground="#2E7D32" FontWeight="Bold" FontSize="12"
-                       Text="【宜】扩建基地、装饰家园、养小动物" />
+                       Text="【宜】制作地图、寻找要塞、驯服猫咪" />
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,0" Foreground="#C62828" FontWeight="Bold" FontSize="12"
-                       Text="【忌】单挑凋零、踩压力板、忘记带水桶" />
+                       Text="【忌】挖钻石不用时运、和猪灵以物易物、在下界睡觉" />
         </StackPanel>
     </local:MyCard>
 </Grid>
@@ -45,10 +45,10 @@
     <!-- 左栏：冒险生存小贴士 -->
     <local:MyCard Grid.Column="0" Title="冒险生存小贴士" CanSwap="True" IsSwapped="False" Margin="0,0,8,0">
         <StackPanel Margin="25,40,23,15">
-            <local:MyHint Theme="Yellow"
-                          Text="【指南针不指家】" />
+            <local:MyHint Theme="Blue"
+                          Text="【末影人怕水】" />
             <TextBlock TextWrapping="Wrap" Margin="0,8,0,0"
-                       Text="指南针指向的是世界出生点，不是你的床！如果想让它指家，需要把出生点改到你家附近，或者用 lodestone（磁石）。" />
+                       Text="末影人碰到水会受到伤害并瞬移走。下雨时它们会到处乱传送，这时候在头上放个方块或者躲进水里就安全啦！" />
         </StackPanel>
     </local:MyCard>
 
@@ -61,9 +61,9 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12"
-                           Text="( ´ ▽ ` )ﾉ 乘着小船在浩瀚的大海上漂流，吹着海风看看跳出水面的小海豚~" />
+                           Text="(≧▽≦) 今天想吃点什么好吃的？MC 里的牛排和蛋糕都不错哦~" />
                 <local:MyImage Grid.Column="1" Width="35" Height="35"
-                               Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-bunny.jpg"
+                               Source="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-duck.jpg"
                                FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
             </Grid>
         </StackPanel>
@@ -81,7 +81,7 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <local:MyListItem Grid.Column="0" Margin="-5,2,5,8"
-                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-penguin.jpg"
+                              Logo="https://gxynpb.github.io/Custom.xaml/pcl-home/assets/icon-fox.jpg"
                               Title="MCMOD 百科"
                               Info="最大的 Minecraft 中文 MOD 百科"
                               EventType="打开网页"
