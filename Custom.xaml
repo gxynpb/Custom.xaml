@@ -1,6 +1,6 @@
 <!-- PCL2 自定义主页 - YARN 粉色系主题
      由 generate.py 自动生成，每天内容不一样
-     生成时间: 2026-10-03 11:14:15
+     生成时间: 2026-10-03 15:51:41
      种子: 20261003
      如果玩炸了，把这个文件直接删除即可恢复默认。 -->
 
@@ -98,6 +98,25 @@
     </StackPanel>
 </local:MyCard>
 
+<!-- ============================================ -->
+<!--  专属定制 & 陪伴提示 -->
+<!-- ============================================ -->
+<local:MyCard Margin="0,0,0,15" CanSwap="False" HasMouseAnimation="False">
+    <StackPanel Margin="25,18,23,18">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" TextWrapping="Wrap" FontWeight="Bold" FontSize="13"
+                       Text="💗 Crafted with love · For My Baby 专属定制 🌸" />
+            <TextBlock Grid.Column="1" Foreground="#888888" FontSize="11"
+                       Text="⏱ 本次已陪伴 5 分钟" />
+        </Grid>
+        <TextBlock TextWrapping="Wrap" Margin="0,8,0,0" Foreground="#666666" FontSize="11"
+                   Text="已经玩了 5 分钟啦，今天有没有挖到钻石？有没有在悄悄想我吖~ 💎💘" />
+    </StackPanel>
+</local:MyCard>
 
 <!-- ============================================ -->
 <!--  主题定制与管理 -->
